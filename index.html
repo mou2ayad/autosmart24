@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autosmart24 - Automakler</title>
+    <title>Autosmart24 - Automakelaar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -26,6 +27,20 @@
     </style>
 </head>
 <body>
-    <iframe src="https://mou2ayad.wixsite.com/autosmart24" title="AutoSmart24"></iframe>
+    <iframe id="dynamicIframe" title="Autosmart24 - Automakelaar"></iframe>
+
+    <script>
+        // Base URL of the iframe
+        const baseURL = "https://mou2ayad.wixsite.com/autosmart24";
+
+        // Get the current URL's path and query string
+        const extraPath = window.location.pathname + window.location.search;
+
+        // Construct the final URL
+        const iframeURL = baseURL + extraPath;
+
+        // Set the iframe's source dynamically
+        document.getElementById("dynamicIframe").src = iframeURL;
+    </script>
 </body>
 </html>
